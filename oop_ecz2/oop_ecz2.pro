@@ -26,13 +26,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    temperature.cpp \
-    history.cpp
+    temperature.cpp
 
 HEADERS += \
         mainwindow.h \
-    temperature.h \
-    history.h
+    temperature.h
 
 FORMS += \
         mainwindow.ui

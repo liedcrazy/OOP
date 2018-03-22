@@ -5,7 +5,7 @@
 class temperature
 {
 private:
-    float C=0, F=0;
+    float C, F;
 
 public:
     temperature();

@@ -6,12 +6,12 @@
 class history
 {
 private:
-QString filename = "history.txt";
-QFile file(filename);
+    QString filename = "history.txt";
+    QFile file(filename);
 public:
     history();
-    void save(QString s);
-    QString load();
+    void save_h(QString s);
+    QString load_h();
 };
 
 #endif // HISTORY_H

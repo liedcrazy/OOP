@@ -6,9 +6,17 @@ history::history()
 }
 
 void history::save(QString s){
+    if (file.open(QIODevice::WriteOnly))
+    {
+        file.write(s);
+        file.close();
+    }
+}
 
-    if (file.open(QIODevice::ReadWrite)) {
-            QTextStream stream(&file);
-            stream << "something" << endl;
-        }
+QString history::load(){
+    if ((file.exists())&&(file.open(QIODevice::ReadOnly)))
+    {
+        return file.readAll();
+        file.close();
+    }
 }

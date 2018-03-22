@@ -84,13 +84,14 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
     <property name="title">
      <string>Файл</string>
     </property>
+    <addaction name="action_2"/>
     <addaction name="action"/>
    </widget>
    <addaction name="menu"/>
@@ -107,6 +108,11 @@
   <action name="action">
    <property name="text">
     <string>Загрузить историю</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Выгрузить историю</string>
    </property>
   </action>
  </widget>

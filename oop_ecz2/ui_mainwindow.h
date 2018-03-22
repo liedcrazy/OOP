@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.2
+** Created by: Qt User Interface Compiler version 5.2.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -33,6 +33,7 @@ class Ui_MainWindow
 {
 public:
     QAction *action;
+    QAction *action_2;
     QWidget *centralWidget;
     QVBoxLayout *verticalLayout_3;
     QVBoxLayout *verticalLayout;
@@ -59,6 +60,8 @@ public:
         MainWindow->resize(400, 344);
         action = new QAction(MainWindow);
         action->setObjectName(QStringLiteral("action"));
+        action_2 = new QAction(MainWindow);
+        action_2->setObjectName(QStringLiteral("action_2"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         verticalLayout_3 = new QVBoxLayout(centralWidget);
@@ -134,7 +137,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 400, 21));
+        menuBar->setGeometry(QRect(0, 0, 400, 20));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
         MainWindow->setMenuBar(menuBar);
@@ -146,6 +149,7 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         menuBar->addAction(menu->menuAction());
+        menu->addAction(action_2);
         menu->addAction(action);
 
         retranslateUi(MainWindow);
@@ -155,13 +159,14 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", Q_NULLPTR));
-        action->setText(QApplication::translate("MainWindow", "\320\227\320\260\320\263\321\200\321\203\320\267\320\270\321\202\321\214 \320\270\321\201\321\202\320\276\321\200\320\270\321\216", Q_NULLPTR));
-        label_2->setText(QApplication::translate("MainWindow", "F", Q_NULLPTR));
-        label_3->setText(QApplication::translate("MainWindow", "C", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("MainWindow", "\320\237\320\265\321\200\320\265\320\262\320\276\320\264", Q_NULLPTR));
-        label->setText(QApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\200\320\270\321\217:", Q_NULLPTR));
-        menu->setTitle(QApplication::translate("MainWindow", "\320\244\320\260\320\271\320\273", Q_NULLPTR));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0));
+        action->setText(QApplication::translate("MainWindow", "\320\227\320\260\320\263\321\200\321\203\320\267\320\270\321\202\321\214 \320\270\321\201\321\202\320\276\321\200\320\270\321\216", 0));
+        action_2->setText(QApplication::translate("MainWindow", "\320\222\321\213\320\263\321\200\321\203\320\267\320\270\321\202\321\214 \320\270\321\201\321\202\320\276\321\200\320\270\321\216", 0));
+        label_2->setText(QApplication::translate("MainWindow", "F", 0));
+        label_3->setText(QApplication::translate("MainWindow", "C", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "\320\237\320\265\321\200\320\265\320\262\320\276\320\264", 0));
+        label->setText(QApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\200\320\270\321\217:", 0));
+        menu->setTitle(QApplication::translate("MainWindow", "\320\244\320\260\320\271\320\273", 0));
     } // retranslateUi
 
 };
