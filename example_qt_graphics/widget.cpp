@@ -15,7 +15,7 @@ GraphicWidget::GraphicWidget(QWidget *parent) : QGraphicsView(parent)
 
     //Создание таймера
     timer = new QTimer(this);
-    auto r = QObject::connect(timer, &QTimer::timeout, this, &GraphicWidget::update); //подключаем сигнал таймера со слотом обновления
+    QObject::connect(timer, &QTimer::timeout, this, &GraphicWidget::update); //подключаем сигнал таймера со слотом обновления
     timer->start(1000/30);
 
 }
@@ -40,9 +40,9 @@ void GraphicWidget::update(){
 
     this->other_item->setPos( other_item->pos() + v.toPointF());
 
-    for(int i=0;i<rec_items;i++){
-        rec_item = rec_items[i];
-        rec_item->setPos( other_item->pos() + v.toPointF());
+    for(int i=0;i<items.size();i++){
+        other_items = items[i];
+        other_items->setPos( other_items->pos() + v.toPointF());
     }
 
 }
@@ -74,8 +74,8 @@ void GraphicWidget::keyPressEvent(QKeyEvent *event){
 }
 void GraphicWidget::mousePressEvent(QMouseEvent *event){
 
-    rec_items.push_back(scene.addEllipse(event->x() - item_size/4, event->y() - item_size/4, item_size/2,item_size/2, QPen(), QBrush(QColor(Qt::blue))));
-
+   other_items = scene.addEllipse(event->x() - item_size/4, event->y() - item_size/4, item_size/2,item_size/2, QPen(), QBrush(QColor(Qt::blue)));
+   items.push_back(other_items);
 }
 
 

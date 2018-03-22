@@ -6,7 +6,7 @@
 #include <QGraphicsObject>
 #include <QGraphicsScene>
 #include <QGraphicsView>
-#include <vector>
+#include <QVector>
 
 class GraphicWidget : public QGraphicsView
 {
@@ -30,10 +30,10 @@ private:
     QGraphicsScene scene;
 
 // Графический объект (базовый класс)
-    QVector rec_items;
     QGraphicsItem *my_item;
     QGraphicsItem *other_item;
-    QGraphicsItem *rec_item;
+    QGraphicsItem *other_items;
+    QVector<QGraphicsItem>items;
     unsigned item_size = 20;
     QVector2D v;
 
