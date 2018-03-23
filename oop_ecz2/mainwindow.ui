@@ -31,7 +31,20 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_F"/>
+             <widget class="QLineEdit" name="lineEdit_F">
+              <property name="inputMethodHints">
+               <set>Qt::ImhNone</set>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="maxLength">
+               <number>32767</number>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -45,7 +58,17 @@
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_C"/>
+             <widget class="QLineEdit" name="lineEdit_C">
+              <property name="inputMethodHints">
+               <set>Qt::ImhNone</set>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>

@@ -87,6 +87,8 @@ public:
 
         lineEdit_F = new QLineEdit(centralWidget);
         lineEdit_F->setObjectName(QStringLiteral("lineEdit_F"));
+        lineEdit_F->setInputMethodHints(Qt::ImhNone);
+        lineEdit_F->setMaxLength(32767);
 
         horizontalLayout->addWidget(lineEdit_F);
 
@@ -103,6 +105,7 @@ public:
 
         lineEdit_C = new QLineEdit(centralWidget);
         lineEdit_C->setObjectName(QStringLiteral("lineEdit_C"));
+        lineEdit_C->setInputMethodHints(Qt::ImhNone);
 
         horizontalLayout_2->addWidget(lineEdit_C);
 
@@ -163,7 +166,11 @@ public:
         action->setText(QApplication::translate("MainWindow", "\320\227\320\260\320\263\321\200\321\203\320\267\320\270\321\202\321\214 \320\270\321\201\321\202\320\276\321\200\320\270\321\216", 0));
         action_2->setText(QApplication::translate("MainWindow", "\320\222\321\213\320\263\321\200\321\203\320\267\320\270\321\202\321\214 \320\270\321\201\321\202\320\276\321\200\320\270\321\216", 0));
         label_2->setText(QApplication::translate("MainWindow", "F", 0));
+        lineEdit_F->setInputMask(QString());
+        lineEdit_F->setText(QString());
         label_3->setText(QApplication::translate("MainWindow", "C", 0));
+        lineEdit_C->setInputMask(QString());
+        lineEdit_C->setText(QString());
         pushButton->setText(QApplication::translate("MainWindow", "\320\237\320\265\321\200\320\265\320\262\320\276\320\264", 0));
         label->setText(QApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\200\320\270\321\217:", 0));
         menu->setTitle(QApplication::translate("MainWindow", "\320\244\320\260\320\271\320\273", 0));

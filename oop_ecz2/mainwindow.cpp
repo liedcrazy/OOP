@@ -5,6 +5,7 @@
 #include "QDebug"
 #include "QFile"
 #include "QDateTime"
+#include "QIntValidator"
 
 QFile file("history.txt");
 
@@ -13,6 +14,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    ui->lineEdit_C->setValidator(new QIntValidator);
+    ui->lineEdit_F->setValidator(new QIntValidator);
 }
 
 MainWindow::~MainWindow()
@@ -42,14 +45,6 @@ void MainWindow::on_pushButton_clicked()
 }
 void MainWindow::on_action_2_triggered()
 {
-//    if ( file.open(QIODevice::WriteOnly))
-//    {
-//        qDebug() << ui->textEdit->toPlainText();
-//        QTextStream out(&file);//поток для записи текста
-//        out << ui->textEdit->toPlainText();//toHtml();
-//        file.close();
-//    }
-
     qDebug() << file.isOpen();
     if ((file.exists())&&(file.open(QIODevice::Append)))
     {

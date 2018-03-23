@@ -3,7 +3,8 @@
 
 temperature::temperature()
 {
-
+    C=0;
+    F=0;
 }
 
 void temperature::setC(short int c){
