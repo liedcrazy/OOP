@@ -4,18 +4,18 @@
 #include "QString"
 #include "QDebug"
 #include "QFile"
-#include "QDateTime"
-#include "QIntValidator"
+//#include "QIntValidator" //bad int. float
 
-QFile file("history.txt");
+QFile file("log.txt");
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->lineEdit_C->setValidator(new QIntValidator);
-    ui->lineEdit_F->setValidator(new QIntValidator);
+    //ui->lineEdit_C->setValidator(new QIntValidator);
+    //ui->lineEdit_F->setValidator(new QIntValidator);
+    ui->textEdit->setReadOnly(true);
 }
 
 MainWindow::~MainWindow()
@@ -31,7 +31,7 @@ void MainWindow::on_pushButton_clicked()
         ui->lineEdit_F->setText("");
         temp.convert_FtoC();
 
-        ui->textEdit->append("F:" + QString::number(temp.getF()) + " C:" + QString::number(temp.getC()) +" Time:"+ QDateTime::currentDateTime().toString("yyyy-MM-dd_hh-mm-ss"));
+        ui->textEdit->append("F:" + QString::number(temp.getF()) + " C:" + QString::number(temp.getC()));
         qDebug() << "F:"<<temp.getF()  <<" C:"<< temp.getC();
     }
     if (ui->lineEdit_C->text() != ""){
@@ -39,7 +39,7 @@ void MainWindow::on_pushButton_clicked()
         ui->lineEdit_C->setText("");
         temp.convert_CtoF();
 
-        ui->textEdit->append("F:" + QString::number(temp.getF()) + " C:" + QString::number(temp.getC()) +" Time:"+ QDateTime::currentDateTime().toString("yyyy-MM-dd_hh-mm-ss"));
+        ui->textEdit->append("F:" + QString::number(temp.getF()) + " C:" + QString::number(temp.getC()));
         qDebug() << "F:"<<temp.getF()  <<" C:"<< temp.getC();
     }
 }
@@ -50,7 +50,7 @@ void MainWindow::on_action_2_triggered()
     {
         qDebug() << file.isOpen();
         QTextStream out(&file);//поток для записи текста
-        out << "\n" + ui->textEdit->toPlainText();
+        out << ui->textEdit->toPlainText()+"\n";
         file.close();
     }
 }

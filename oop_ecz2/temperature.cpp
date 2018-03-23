@@ -1,5 +1,5 @@
 #include "temperature.h"
-
+#include "QDebug"
 
 temperature::temperature()
 {
@@ -7,12 +7,18 @@ temperature::temperature()
     F=0;
 }
 
-void temperature::setC(short int c){
-    C=c;
+void temperature::setC(float c){
+    if (C=c)
+        qDebug() << "C good";
+    else qDebug() << "C bad";
+
+
 }
 
-void temperature::setF(short int f){
-    F=f;
+void temperature::setF(float f){
+    if(F=f)
+        qDebug() << "F good";
+    else qDebug() << "F bad";
 }
 
 float temperature::getC(){

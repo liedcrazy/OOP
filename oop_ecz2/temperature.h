@@ -9,8 +9,8 @@ private:
 
 public:
     temperature();
-    void setC(short int c);
-    void setF(short int f);
+    void setC(float c);
+    void setF(float f);
     float getC();
     float getF();
     void convert_CtoF();
