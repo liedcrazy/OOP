@@ -9,7 +9,7 @@ class Matrix
 {
 private:
     int n; //размер квадратичной матрицы
-    vector <vector <float> > A, inA;
+    vector <vector <float> > A, invA;
     vector <vector <float> > T,B;
 public:
     Matrix();
