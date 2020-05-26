@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <string>
+
+
+using namespace std;
 
 namespace Ui {
 class MainWindow;
@@ -30,7 +34,12 @@ private slots:
     void on_pushButton_plus_clicked();
     void on_pushButton_result_clicked();
 
+    void on_pushButton_Clear_clicked();
+
+    void on_pushButton_minus_clicked();
+
 private:
+    int result(string res);
     Ui::MainWindow *ui;
 };
 
